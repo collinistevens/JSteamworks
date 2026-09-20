@@ -171,14 +171,6 @@ public final class SteamMatchmaking {
         }
     }
 
-    public static void addRequestLobbyListCompatibleMembersFilter(long steamIdLobby) {
-        try {
-            SteamAPI_ISteamMatchmaking_AddRequestLobbyListCompatibleMembersFilter.invokeExact(self(), steamIdLobby);
-        } catch (Throwable t) {
-            throw new RuntimeException("SteamAPI_ISteamMatchmaking_AddRequestLobbyListCompatibleMembersFilter call failed", t);
-        }
-    }
-
     public static long getLobbyByIndex(int index) {
         try {
             return (long) SteamAPI_ISteamMatchmaking_GetLobbyByIndex.invokeExact(self(), index);
@@ -274,14 +266,6 @@ public final class SteamMatchmaking {
             return (boolean) SteamAPI_ISteamMatchmaking_SetLobbyOwner.invokeExact(self(), steamIdLobby, steamIdNewOwner);
         } catch (Throwable t) {
             throw new RuntimeException("SteamAPI_ISteamMatchmaking_SetLobbyOwner call failed", t);
-        }
-    }
-
-    public static boolean setLinkedLobby(long steamIdLobby, long steamIdLobbyDependent) {
-        try {
-            return (boolean) SteamAPI_ISteamMatchmaking_SetLinkedLobby.invokeExact(self(), steamIdLobby, steamIdLobbyDependent);
-        } catch (Throwable t) {
-            throw new RuntimeException("SteamAPI_ISteamMatchmaking_SetLinkedLobby call failed", t);
         }
     }
 

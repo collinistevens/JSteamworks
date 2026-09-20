@@ -93,11 +93,6 @@ final class SteamMatchmakingNative {
             ValueLayout.ADDRESS,
             ValueLayout.JAVA_INT);
 
-    static final MethodHandle SteamAPI_ISteamMatchmaking_AddRequestLobbyListCompatibleMembersFilter = SteamNative.bindVoid(
-            "SteamAPI_ISteamMatchmaking_AddRequestLobbyListCompatibleMembersFilter",
-            ValueLayout.ADDRESS,
-            ValueLayout.JAVA_LONG);
-
     static final MethodHandle SteamAPI_ISteamMatchmaking_GetLobbyByIndex = SteamNative.bind(
             "SteamAPI_ISteamMatchmaking_GetLobbyByIndex",
             ValueLayout.JAVA_LONG,
@@ -163,13 +158,6 @@ final class SteamMatchmakingNative {
     
     static final MethodHandle SteamAPI_ISteamMatchmaking_SetLobbyOwner = SteamNative.bind(
             "SteamAPI_ISteamMatchmaking_SetLobbyOwner",
-            ValueLayout.JAVA_BOOLEAN,
-            ValueLayout.ADDRESS,
-            ValueLayout.JAVA_LONG,
-            ValueLayout.JAVA_LONG);
-    
-    static final MethodHandle SteamAPI_ISteamMatchmaking_SetLinkedLobby = SteamNative.bind(
-            "SteamAPI_ISteamMatchmaking_SetLinkedLobby",
             ValueLayout.JAVA_BOOLEAN,
             ValueLayout.ADDRESS,
             ValueLayout.JAVA_LONG,
