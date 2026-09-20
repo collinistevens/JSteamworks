@@ -46,4 +46,12 @@ public final class SteamAPI {
         }
     }
 
+    public static int getHSteamPipe() {
+        try {
+            return (int) SteamAPI_GetHSteamPipe.invokeExact();
+        } catch (Throwable t) {
+            throw new RuntimeException("SteamAPI_GetHSteamPipe call failed", t);
+        }
+    }
+
 }

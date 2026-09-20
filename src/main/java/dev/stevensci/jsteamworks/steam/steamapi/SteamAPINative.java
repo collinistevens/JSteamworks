@@ -55,4 +55,8 @@ final class SteamAPINative {
             "SteamAPI_IsSteamRunning",
             ValueLayout.JAVA_BOOLEAN);
 
+    static final MethodHandle SteamAPI_GetHSteamPipe = SteamNative.bind(
+            "SteamAPI_GetHSteamPipe",
+            ValueLayout.JAVA_INT);
+
 }

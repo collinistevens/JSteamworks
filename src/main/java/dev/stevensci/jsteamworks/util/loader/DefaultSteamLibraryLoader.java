@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Locale;
 
-public class DefaultSteamLibraryLoader implements SteamLibraryLoader {
+public final class DefaultSteamLibraryLoader implements SteamLibraryLoader {
 
     @Override
     public Path locate(String libraryName) {
